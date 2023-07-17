@@ -28,18 +28,18 @@ void sendMessage() ; // Prototype so PlatformIO doesn't complain
 void ledOff();
 
 Task taskSendMessage( TASK_SECOND * 1 , TASK_FOREVER, &sendMessage );
-Task taskLedOff( TASK_SECOND * 1 , TASK_FOREVER, &ledOff );
+Task taskLedOff( TASK_SECOND * 0.5 , TASK_FOREVER, &ledOff );
 
 void flashOnSend() {
   M5.dis.drawpix(0, LED_GREEN);
   //Serial.println("flashSendLedOn() called.");
-  taskLedOff.restartDelayed( TASK_SECOND * 0.5 );
+  taskLedOff.enableDelayed( TASK_SECOND * 0.5 );
 }
 
 void flashOnReceive() {
   M5.dis.drawpix(0, LED_BLUE);
   //Serial.println("flashOnReceive() called.");
-  taskLedOff.restartDelayed( TASK_SECOND * 0.5 );
+  taskLedOff.enableDelayed( TASK_SECOND * 0.5 );
 }
 
 void ledOff() {
