@@ -1,6 +1,6 @@
-# BLE Mesh Atomlite Sample
+# MeshNode Atomlite Sample
 
-This is an example for BLE Mesh that works on M5 AtomLite. This code is based on the [basic sample](https://gitlab.com/painlessMesh/painlessMesh/-/tree/develop/examples/basic) of painlessMesh.
+This is an example for mesh network node that works on M5 AtomLite. This code is based on the [basic sample](https://gitlab.com/painlessMesh/painlessMesh/-/tree/develop/examples/basic) of painlessMesh.
 
 To compile this code, the following libraries are required. You have to install bellow in Arduino IDE before compile the code.
 
